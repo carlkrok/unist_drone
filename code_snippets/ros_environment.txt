@@ -1,0 +1,10 @@
+It's convenient if the ROS environment variables are automatically added to your bash session every time a new shell is launched:
+
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+If you have more than one ROS distribution installed, ~/.bashrc must only source the setup.bash for the version you are currently using.
+
+If you just want to change the environment of your current shell, instead of the above you can type:
+
+source /opt/ros/kinetic/setup.bash
