@@ -3,6 +3,6 @@ prefix=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/devel
 Name: beginner_tutorials
 Description: Description of beginner_tutorials
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/devel/include
 Libs: -L/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/devel/lib 
-Requires: 
+Requires: message_runtime

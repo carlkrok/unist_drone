@@ -1,0 +1,13 @@
+background_b: 170
+background_g: 86
+background_r: 40
+rosdistro: 'kinetic
+
+  '
+roslaunch:
+  uris: {host_carl_local__41721: 'http://carl.local:41721/'}
+rosversion: '1.12.13
+
+  '
+run_id: a6f6a8a2-7a0d-11e8-849a-8bb2cb6c9aed
+turtlesim: {name: my_turtle}
