@@ -1,0 +1,14 @@
+To start webcamera publishing:
+
+rosrun usb_camera usb_camera_node _video_device:=/dev/video0 _image_width:=1280
+_image_height:=720 _framerate:=30 _autofocus:=true
+
+To start image capture service:
+
+rosrun image_view image_saver image:=/usb_camera/image_compressed _filename_format:=saved_images/image%04i.jpg _save_all_image:=false _name:=image_capture_service
+
+To call save image service:
+
+rosservice call /image_capture_service/save
+
+
