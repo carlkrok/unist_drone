@@ -78,16 +78,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -98,6 +88,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install
 install: preinstall
@@ -111,16 +112,15 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"main\""
+.PHONY : list_install_components
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : test/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -166,79 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
-.PHONY : velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule:
+	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule
+.PHONY : velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule
 
 # Convenience name for target.
-diagnostic_msgs_generate_messages_nodejs: velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+velodyne_puck_driver_nodelet: velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule
 
-.PHONY : diagnostic_msgs_generate_messages_nodejs
+.PHONY : velodyne_puck_driver_nodelet
 
 # fast build rule for target.
-diagnostic_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
-.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-.PHONY : velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_lisp: velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_lisp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
-.PHONY : velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_eus: velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_eus
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
-.PHONY : diagnostic_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-.PHONY : velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_cpp: velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_cpp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-.PHONY : velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_py: velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-.PHONY : diagnostic_msgs_generate_messages_py/fast
+velodyne_puck_driver_nodelet/fast:
+	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/build
+.PHONY : velodyne_puck_driver_nodelet/fast
 
 # Convenience name for target.
 velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver.dir/rule:
@@ -254,21 +194,6 @@ velodyne_puck_driver: velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puc
 velodyne_puck_driver/fast:
 	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver.dir/build
 .PHONY : velodyne_puck_driver/fast
-
-# Convenience name for target.
-velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule
-.PHONY : velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule
-
-# Convenience name for target.
-velodyne_puck_driver_nodelet: velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/rule
-
-.PHONY : velodyne_puck_driver_nodelet
-
-# fast build rule for target.
-velodyne_puck_driver_nodelet/fast:
-	cd /home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build && $(MAKE) -f velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/build.make velodyne_puck/velodyne_puck_driver/CMakeFiles/velodyne_puck_driver_nodelet.dir/build
-.PHONY : velodyne_puck_driver_nodelet/fast
 
 src/velodyne_puck_driver.o: src/velodyne_puck_driver.cc.o
 
@@ -332,18 +257,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... diagnostic_msgs_generate_messages_nodejs"
-	@echo "... list_install_components"
-	@echo "... diagnostic_msgs_generate_messages_lisp"
 	@echo "... install/strip"
-	@echo "... install"
-	@echo "... diagnostic_msgs_generate_messages_eus"
 	@echo "... test"
-	@echo "... diagnostic_msgs_generate_messages_cpp"
-	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... velodyne_puck_driver_nodelet"
 	@echo "... velodyne_puck_driver"
 	@echo "... install/local"
-	@echo "... velodyne_puck_driver_nodelet"
 	@echo "... src/velodyne_puck_driver.o"
 	@echo "... src/velodyne_puck_driver.i"
 	@echo "... src/velodyne_puck_driver.s"

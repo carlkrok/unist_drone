@@ -304,7 +304,7 @@ YAML_CPP_INCLUDE_DIR:PATH=YAML_CPP_INCLUDE_DIR-NOTFOUND
 YAML_CPP_LIBRARY:FILEPATH=YAML_CPP_LIBRARY-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/src/velodyne/velodyne_pointcloud/tests/two_nodelet_managers.test
+_file_name:FILEPATH=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/src/velodyne/velodyne_laserscan/tests/system_nodelet.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -544,8 +544,7 @@ velodyne_SOURCE_DIR:STATIC=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_
 //Value Computed by CMake
 velodyne_driver_BINARY_DIR:STATIC=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build/velodyne/velodyne_driver
 
-//The directory containing a CMake configuration file for velodyne_driver.
-velodyne_driver_DIR:PATH=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/devel/share/velodyne_driver/cmake
+velodyne_driver_DIR:PATH=
 
 //Value Computed by CMake
 velodyne_driver_SOURCE_DIR:STATIC=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/src/velodyne/velodyne_driver
@@ -756,7 +755,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

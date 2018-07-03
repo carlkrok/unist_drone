@@ -1,2 +1,2 @@
-beginner_tutorials:velodyne_puck/velodyne_puck:velodyne_puck/velodyne_puck_decoder:velodyne_puck/velodyne_puck_driver:velodyne_puck/velodyne_puck_msgs
+beginner_tutorials:velodyne/velodyne:velodyne/velodyne_driver:velodyne/velodyne_laserscan:velodyne/velodyne_msgs:velodyne_puck/velodyne_puck:velodyne_puck/velodyne_puck_decoder:velodyne_puck/velodyne_puck_driver:velodyne_puck/velodyne_puck_msgs
 -DCATKIN_DEVEL_PREFIX=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/install -G Unix Makefiles
