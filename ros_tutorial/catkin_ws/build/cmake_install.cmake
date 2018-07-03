@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "kinetic")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -117,7 +117,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build/velodyne_puck/velodyne_puck/cmake_install.cmake")
+  include("/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build/velodyne_puck/velodyne_puck_msgs/cmake_install.cmake")
   include("/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
+  include("/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build/velodyne_puck/velodyne_puck_decoder/cmake_install.cmake")
+  include("/home/ubuntu/Desktop/unist_drone/ros_tutorial/catkin_ws/build/velodyne_puck/velodyne_puck_driver/cmake_install.cmake")
 
 endif()
 
